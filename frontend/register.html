@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up — Arexon</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="auth-shell reverse">
+    <div class="auth-visual">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-3"></div>
+        <a href="index.html" class="brand">are<span class="gradient-text">xon</span></a>
+        <div class="auth-visual-content">
+            <h2>Join thousands shopping smarter.</h2>
+            <p>Create an account to save your cart, track orders, and check out faster next time.</p>
+        </div>
+        <div class="auth-visual-footer">&copy; 2026 Arexon</div>
+    </div>
+
+    <div class="auth-form-side">
+        <div class="auth-page">
+            <h1>Create your account</h1>
+            <p class="auth-subtitle">Sign up to start shopping</p>
+            <div id="form-alert"></div>
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" required autocomplete="name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required autocomplete="email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="password-field">
+                        <input type="password" id="password" required minlength="6" autocomplete="new-password">
+                        <button type="button" class="password-toggle" data-target="password"></button>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-accent btn-block" id="submit-btn">Sign Up</button>
+            </form>
+            <p class="auth-switch">Already have an account? <a href="login.html">Log in</a></p>
+            <p class="auth-cross-link"><a href="admin-register.html">Sign up as an administrator instead →</a></p>
+        </div>
+    </div>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

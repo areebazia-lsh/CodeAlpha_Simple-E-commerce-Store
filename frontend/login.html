@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Customer Login — Arexon</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="auth-shell reverse">
+    <div class="auth-visual">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <a href="index.html" class="brand">are<span class="gradient-text">xon</span></a>
+        <div class="auth-visual-content">
+            <h2>Everything you need, delivered right.</h2>
+            <p>Track orders, manage your cart, and shop a full catalog — all from one account.</p>
+        </div>
+        <div class="auth-visual-footer">&copy; 2026 Arexon</div>
+    </div>
+
+    <div class="auth-form-side">
+        <div class="auth-page">
+            <h1>Welcome back</h1>
+            <p class="auth-subtitle">Log in to your customer account</p>
+            <div id="form-alert"></div>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required autocomplete="email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="password-field">
+                        <input type="password" id="password" required autocomplete="current-password">
+                        <button type="button" class="password-toggle" data-target="password"></button>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-accent btn-block" id="submit-btn">Log In</button>
+            </form>
+            <p class="auth-switch">Don't have an account? <a href="register.html">Sign up</a></p>
+            <p class="auth-cross-link"><a href="admin-login.html">Log in as an administrator instead →</a></p>
+        </div>
+    </div>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Sign Up — Arexon</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="auth-shell">
+    <div class="auth-visual" style="background: linear-gradient(-45deg, #150A1F, #1E1240, #0F0A24, #1B1240); background-size:400% 400%;">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-3"></div>
+        <a href="index.html" class="brand">are<span class="gradient-text">xon</span> <span class="badge-admin">Admin</span></a>
+        <div class="auth-visual-content">
+            <h2>New to managing Arexon?</h2>
+            <p>Ask the store owner for the admin signup code before creating your account.</p>
+        </div>
+        <div class="auth-visual-footer">&copy; 2026 Arexon</div>
+    </div>
+
+    <div class="auth-form-side">
+        <div class="auth-page">
+            <h1>Create Admin Account</h1>
+            <p class="auth-subtitle">Requires the store's admin signup code</p>
+            <div id="form-alert"></div>
+            <form id="admin-register-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" required autocomplete="name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required autocomplete="email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="password-field">
+                        <input type="password" id="password" required minlength="6" autocomplete="new-password">
+                        <button type="button" class="password-toggle" data-target="password"></button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="admin-code">Admin Signup Code</label>
+                    <input type="text" id="admin-code" required autocomplete="off" placeholder="Ask your store owner for this">
+                </div>
+                <button type="submit" class="btn btn-accent btn-block" id="submit-btn">Sign Up</button>
+            </form>
+            <p class="auth-switch">Already have an admin account? <a href="admin-login.html">Log in</a></p>
+            <p class="auth-cross-link"><a href="register.html">Sign up as a customer instead →</a></p>
+        </div>
+    </div>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

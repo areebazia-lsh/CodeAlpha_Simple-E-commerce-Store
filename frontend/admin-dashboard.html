@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard — Arexon</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="header-inner">
+        <a href="admin-dashboard.html" class="brand">are<span>xon</span> <span class="badge-admin">Admin</span></a>
+        <nav class="nav-links">
+            <a href="shop.html">View Store</a>
+            <span id="admin-greeting"></span>
+            <button id="logout-btn">Logout</button>
+        </nav>
+    </div>
+</header>
+
+<main class="container" style="padding:40px 0 80px;">
+    <h1 style="margin-bottom:24px;">Admin Dashboard</h1>
+
+    <div class="admin-tabs">
+        <button class="admin-tab active" data-tab="products">Products</button>
+        <button class="admin-tab" data-tab="orders">Orders</button>
+        <button class="admin-tab" data-tab="analytics">Analytics</button>
+    </div>
+
+    <!-- ---------- Products tab ---------- -->
+    <section id="tab-products">
+        <div id="low-stock-banner"></div>
+
+        <form class="admin-form" id="product-form">
+            <input type="hidden" id="product-id">
+            <div class="form-group">
+                <label for="p-name">Name</label>
+                <input type="text" id="p-name" required>
+            </div>
+            <div class="form-group">
+                <label for="p-price">Price (Rs.)</label>
+                <input type="number" id="p-price" step="0.01" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="p-category">Category</label>
+                <input type="text" id="p-category">
+            </div>
+            <div class="form-group">
+                <label for="p-stock">Stock</label>
+                <input type="number" id="p-stock" min="0" required>
+            </div>
+            <div class="form-group full-width">
+                <label>Media (images &amp; videos)</label>
+                <div id="media-rows"></div>
+                <button type="button" class="btn btn-outline" id="add-media-btn" style="margin-top:8px;">+ Add Image or Video</button>
+                <p style="font-size:0.78rem; color:var(--ink-soft); margin-top:6px;">
+                    Add as many as you like. The first image becomes the product's cover thumbnail.
+                </p>
+            </div>
+            <div class="form-group full-width">
+                <label for="p-description">Description</label>
+                <input type="text" id="p-description">
+            </div>
+            <div class="full-width" id="product-form-alert"></div>
+            <div class="full-width" style="display:flex; gap:10px;">
+                <button type="submit" class="btn btn-accent" id="product-submit-btn">Add Product</button>
+                <button type="button" class="btn btn-outline" id="product-cancel-btn" hidden>Cancel Edit</button>
+            </div>
+        </form>
+
+        <div class="admin-card-grid" id="products-grid">
+            <p>Loading products…</p>
+        </div>
+    </section>
+
+    <!-- ---------- Orders tab ---------- -->
+    <section id="tab-orders" hidden>
+        <div id="orders-list">
+            <p>Loading orders…</p>
+        </div>
+    </section>
+
+    <!-- ---------- Analytics tab ---------- -->
+    <section id="tab-analytics" hidden>
+        <div id="analytics-content">
+            <p>Loading analytics…</p>
+        </div>
+    </section>
+</main>
+
+<footer>&copy; 2026 Arexon. A student full-stack demo project.</footer>
+
+<script src="js/api.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>
