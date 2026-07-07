@@ -191,4 +191,5 @@ Open `http://localhost:5000` — that's the landing page.
 - **Admin/customer separation is enforced on both ends**: the frontend hides
   cart/checkout UI for admin accounts, and the backend's `requireAdmin`
   middleware independently blocks non-admins from every `/api/admin/*` route
-  — so it's not just a UI restriction that could be bypassed.
+  — so it's not just a UI restriction that could be bypassed.#   C o d e A l p h a _ S i m p l e - E - c o m m e r c e - S t o r e  
+ 
